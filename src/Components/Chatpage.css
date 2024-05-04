@@ -1,0 +1,11 @@
+.Chatpage-top{
+height: 10vh;
+}
+.Chatpage-mid{
+    height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.Chatpage-bot{
+    height: 7vh;
+}
