@@ -10,8 +10,7 @@ const UserList = () => {
   const userlist = useSelector((state: RootState) => state.responsive.userlist);
   const chatpage = useSelector((state:RootState)=>state.responsive.chatpage);
   const dispatch = useDispatch();
-console.log(userlist+"userlist ")
-console.log(chatpage+" chatpage")
+
   return (
     <div className={ `lg:w-1/4 sm:w-lvw in-small-${userlist}`}>
         <UserListTop/>
