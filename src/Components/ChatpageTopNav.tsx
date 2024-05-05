@@ -26,7 +26,7 @@ const ChatpageTopNav = () => {
         <div>
 
         </div>
-        <div>
+        <div className=''>
         <LogoutIcon/>
         </div>
       </div>

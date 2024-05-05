@@ -4,6 +4,7 @@ import ChatR from './ChatR'
 import ChatpageTopNav from './ChatpageTopNav';
 import ChatpageBot from './ChatpageBot';
 import './Chatpage.css'
+import TypingAnimation from './Typing';
 
 
 
@@ -21,7 +22,7 @@ const Chatpage: React.FC<ChatPageProps> = () => {
 
 
 {/* top starts */}
-    <div className='Chatpage-top'>
+    <div className='Chatpage-top bg-gray-800'>
     <ChatpageTopNav/>
     </div>
 {/* top ends */}
@@ -32,6 +33,7 @@ const Chatpage: React.FC<ChatPageProps> = () => {
     <Chat name={name}  time={time} message={message} delivered={delivered} />
     <ChatR name="Dimple" time={time} message={message} delivered={delivered} />
     <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} /> <ChatR name="Dimple" time={time} message={message} delivered={delivered} />
+<TypingAnimation/>    
     </div>
 {/* mid ends */}
 
