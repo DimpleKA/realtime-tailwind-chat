@@ -3,7 +3,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 const ChatpageBot = () => {
   return (
-    <div className='w-full h-16 bottom-0 p-3'>
+    <div className='w-full h-16 bottom-0 p-3  bg-slate-200 '>
           
 
           <form className="flex items-center max-w-lg mx-auto">   

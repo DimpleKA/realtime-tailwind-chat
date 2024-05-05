@@ -1,35 +1,34 @@
-import { createSlice } from '@reduxjs/toolkit' // 3 slice banao aur payload laao tookit se
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface CounterState {
-  value: number
+  userlist: string;
+  chatpage: string;
 }
 
 const initialState: CounterState = {
-  value: 0,
-}
+  userlist: "",
+  chatpage: "hidden",
+};
 
-export const responsiveSlice = createSlice({
-  name: 'counter',
+const responsiveSlice = createSlice({
+  name: 'responsive',
   initialState,
   reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1
+    displayUser: (state, action: PayloadAction<string>) => {
+      state.userlist = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1
+    hideUser: (state) => {
+      state.userlist = "hidden";
     },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
+    displayChat: (state, action: PayloadAction<string>) => {
+      state.chatpage = action.payload;
+    },
+    hideChat: (state) => {
+      state.chatpage = "hidden";
     },
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = responsiveSlice.actions
+export const { displayUser, hideUser, displayChat, hideChat } = responsiveSlice.actions;
 
-export default responsiveSlice.reducer
+export default responsiveSlice.reducer;

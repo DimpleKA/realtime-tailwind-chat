@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserListTop = () => {
   return (
-    <div className='w-full  h-16 bottom-0 flex justify-center align-middle'>
+    <div className='w-full  h-16 bottom-0 flex justify-center align-middle border-b border-solid border-gray-300'>
       <div className='m-3'>
         
 <form className="flex items-center max-w-sm mx-auto">   

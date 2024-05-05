@@ -1,10 +1,12 @@
 import React from 'react'
+import { useSelector,useDispatch } from 'react-redux';
 import Chat from './Chat'
 import ChatR from './ChatR'
 import ChatpageTopNav from './ChatpageTopNav';
 import ChatpageBot from './ChatpageBot';
 import './Chatpage.css'
 import TypingAnimation from './Typing';
+import { RootState } from '../store';
 
 
 
@@ -13,12 +15,14 @@ interface ChatPageProps {
 
   }
 const Chatpage: React.FC<ChatPageProps> = () => {
+  const chatpage  = useSelector((state:RootState) => state.responsive.chatpage)
+  console.log(chatpage)
   const name:string ="Vatsal Rishabh";
   const time:string="12:22 pm";
   const message:string="Hi, this is Vatsal";
   const delivered:string="Delivered";
   return (
-    <div className='Chatpage h-svh lg:w-3/4 sm:w-lvw ' >
+    <div className={`Chatpage h-svh lg:w-3/4 sm:w-lvw in-small-${chatpage} `}>
 
 
 {/* top starts */}
@@ -38,7 +42,7 @@ const Chatpage: React.FC<ChatPageProps> = () => {
 {/* mid ends */}
 
 {/* bottom starts */}
-    <div className='Chatpage-bot'>
+    <div className='Chatpage-bot '>
     <ChatpageBot/>
     </div>
 {/* bottm enda */}

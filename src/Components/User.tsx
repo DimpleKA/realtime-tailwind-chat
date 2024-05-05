@@ -1,8 +1,16 @@
 import React from 'react';
+import { RootState } from '../store';
+import { useDispatch } from 'react-redux';
+import {hideUser,displayChat} from '../feature/responsive/responsiveSlice'
 
 const User = () => {
+  const dispatch = useDispatch()
+  const handleHideUser=()=>{
+    dispatch(hideUser());
+    dispatch(displayChat(""));
+  }
   return (
-    <div className="flex items-center justify-between p-4 border-b border-gray-300">
+    <div className="flex items-center justify-between p-4 border-b border-gray-300" onClick={handleHideUser}>
       <div className="flex items-center space-x-4">
         <div className="relative w-12 h-12">
           <img

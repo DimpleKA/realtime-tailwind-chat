@@ -9,3 +9,11 @@ height: 10vh;
 .Chatpage-bot{
     height: 7vh;
 }
+
+
+@media screen and (max-width: 1024px) {
+    .in-small-hidden {
+      display: none;
+    }
+  }
+  
